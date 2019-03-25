@@ -1,0 +1,10 @@
+{
+    "IN_1": {"ADDR" :"0x43000000",
+	     "DATA" :"c.multiplier64.autotvin_slave_V.dat",
+	     "LAST" :"",
+	     "DELAY" :""},
+    "OUT_1": {"ADDR" :"0x44000000",
+	      "DATA" :"c.multiplier64.autotvout_master_V.dat",
+	      "LAST" :"",
+	      "DELAY" :""}}
+
