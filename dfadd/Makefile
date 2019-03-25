@@ -2,7 +2,7 @@ C2IP = python3 /opt/fil_testing/bin/c2IPsrc.py
 C2HLS = python3 /opt/fil_testing/bin/c2hls.py
 
 
-TOP=jpeg
+TOP=adder64
 
 INC_DIRS = ./src
 INC_DIRS += /opt/utf/rc-unity/include/
@@ -36,7 +36,7 @@ hls:
 fil:
 	$(RM) -rf $(OUTPUTDOCKER)
 	mkdir -p $(OUTPUTDOCKER)
-	docker run -i -v /opt/Xilinx:/opt/Xilinx -v $(CURDIR):$(WORKDIR)/host -v $(CURDIR)/$(OUTPUTDOCKER):/$(OUTPUTDOCKER) -e XILINXD_LICENSE_FILE='1900@172.20.48.102:1901@172.20.48.102:1702@172.20.48.102' -e UT='ut_jpeg.cc' -e PL_FLAGS='--nodpr' $(DOCKER_IMG)
+	docker run -i -v /opt/Xilinx:/opt/Xilinx -v $(CURDIR):$(WORKDIR)/host -v $(CURDIR)/$(OUTPUTDOCKER):/$(OUTPUTDOCKER) -e XILINXD_LICENSE_FILE='1900@172.20.48.102:1901@172.20.48.102:1702@172.20.48.102' -e UT='ut_dfadd.cc' $(DOCKER_IMG)
 
 
 clean:

@@ -1,7 +1,5 @@
 C2IP = python3 /opt/fil_testing/bin/c2IPsrc.py
 C2HLS = python3 /opt/fil_testing/bin/c2hls.py
-DAT2FIL= python3 /opt/fil_testing/bin/create_filTest.py
-BITGEN = python3 /opt/fil_testing/bin/create_pl.py
 
 
 TOP=divider64
@@ -18,7 +16,7 @@ DOCKER_IMG=jcaba/zed_$(TEMPLATE):version$(TOOLCHAIN_VERSION)
 WORKDIR=/workspace
 
 
-.PHONY: hls fil_tests bitgen
+.PHONY: hls 
 
 
 all: hdl fil
